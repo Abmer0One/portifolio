@@ -441,21 +441,28 @@
 <section id="contato" class="py-5">
   <div class="container">
     <h2 class="section-title text-center">Contato</h2>
-    <form class="mx-auto" style="max-width:600px;">
-      <div class="mb-3">
-        <label class="form-label">Nome</label>
-        <input type="text" class="form-control" placeholder="Seu nome">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input type="email" class="form-control" placeholder="email@exemplo.com">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Mensagem</label>
-        <textarea class="form-control" rows="4"></textarea>
-      </div>
-      <button class="btn btn-primary w-100">Enviar</button>
-    </form>
+    <form action="https://formsubmit.co/abiudmota2010@live.com.pt" method="POST" class="mx-auto" style="max-width:600px;">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="Novo contato pelo portfólio">
+  
+  <div class="mb-3">
+    <label class="form-label">Nome</label>
+    <input type="text" name="nome" class="form-control" placeholder="Seu nome" required>
+  </div>
+  
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input type="email" name="email" class="form-control" placeholder="email@exemplo.com" required>
+  </div>
+  
+  <div class="mb-3">
+    <label class="form-label">Mensagem</label>
+    <textarea name="mensagem" class="form-control" rows="4" required></textarea>
+  </div>
+  
+  <button type="submit" class="btn btn-primary w-100">Enviar</button>
+</form>
+
   </div>
 </section>
 
