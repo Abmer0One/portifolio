@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abiúd Mota | Portfólio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Animações CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Animações CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Animações CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+    header { background: url('img/4.jpg') center/cover no-repeat; color: transparent; height: 100vh; display:flex; align-items:center; position: relative; }
+    header .overlay { background: rgba(0,0,0,0.5); position:absolute; inset:0; }
+    header .content { position: relative; z-index:1; }
+    .section-title { margin-bottom: 3rem; position: relative; }
+    .section-title::after { content:''; width:60px; height:4px; background:#192E59; position:absolute; bottom:-10px; left:50%; transform:translateX(-50%);}
+    .project-img { width:100%; height:auto; border-radius:8px; }
+    footer { background:#192E59; color:white; padding:20px 0; text-align:center;}
+    .info-list p { margin: 0; }
+    .object-fit-cover { object-fit: cover; height: 70%; }
+    /* Estilos personalizados */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: #007bff; /* Cor primária do Bootstrap */
+            border-radius: 2px;
+        }
+
+        .about-section-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+        }
+
+        .about-image-container {
+            position: relative;
+            width: 45%; /* Ajuste conforme necessário */
+            max-width: 400px; /* Limite máximo para a imagem */
+            z-index: 1;
+        }
+
+        .about-image-container::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            background-color: #333; /* Cor do fundo escuro */
+            z-index: -1;
+            border-radius: 8px;
+        }
+
+        .about-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-text-container {
+            width: 55%; /* Ajuste conforme necessário */
+            padding-left: 2rem; /* Espaçamento entre imagem e texto */
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .about-image-container,
+            .about-text-container {
+                width: 100%;
+                padding-left: 0;
+            }
+            .about-image-container {
+                margin-bottom: 2rem;
+            }
+        }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Abiúd Mota</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="nav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experiencia">Experiência</a></li>
+        <li class="nav-item"><a class="nav-link" href="#competencias">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero / Introdução -->
+<header class="position-relative text-center text-white">
+  <div class="overlay"></div>
+  <div class="content container">
+    <h1 class="display-4">Olá, eu sou Abiúd Mota</h1>
+    <p class="lead">Engenheiro Informático | Desenvolvedor de Aplicações Web & Mobile</p>
+    <a href="#projetos" class="btn btn-primary btn-lg"><i class="fas fa-project-diagram"></i> Ver Projetos</a>
+  </div>
+</header>
+
+<main>
+
+
+   <!-- Sobre -->
+    <section id="sobre" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title text-center">Sobre Mim</h2>
+        <div class="about-section-content">
+          <!-- Imagem -->
+          <div class="about-image-container">
+            <img src="img/4.jpg" alt="Abiúd Mota" class="img-fluid rounded shadow-sm">
+          </div>
+
+          <!-- Texto de apresentação -->
+          <div class="about-text-container">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <h4 class="card-title mb-4 text-center">
+                  <i class="fas fa-user text-primary me-2"></i>Abiúd Mota da Costa
+                </h4>
+                <p class="fs-5 text-justify">
+                  Sou um desenvolvedor de aplicações apaixonado por tecnologia e inovação. Com sólida formação em Engenharia Informática pela Universidade Metodista de Angola e experiência em grandes empresas como a RNT-EP, busco sempre criar soluções técnicas eficientes e funcionais. Minha trajetória profissional reflete o compromisso com a qualidade, a aprendizagem contínua e o desejo constante de contribuir para projetos impactantes nas áreas de desenvolvimento web, mobile e sistemas corporativos.
+                </p>
+
+                <!-- Informações de contato simples -->
+                <div class="mt-4">
+                  <p class="mb-1"><i class="fas fa-envelope text-secondary me-2"></i><strong>Email:</strong> <a href="mailto:abiudmota2010@live.com.pt">abiudmota2010@live.com.pt</a></p>
+                  <p class="mb-1"><i class="fas fa-phone text-primary me-2"></i><strong>Telefone:</strong> 948 824 600 / 952 058 065</p>
+                  <p class="mb-1"><i class="fas fa-map-marker-alt text-success me-2"></i><strong>Localização:</strong> Golf 2, Luanda</p>
+                
+                   <!-- Botão de download do CV -->
+                  <a href="cv_abiud_mota.pdf" class="btn btn-outline-primary" download>
+                    <i class="fas fa-download me-2"></i>Download CV
+                  </a>
+                </div>
+
+                <!-- Badges -->
+                <div class="text-center mt-3">
+                  <span class="badge bg-primary me-2"><i class="fas fa-laptop-code me-1"></i>Engenheiro Informático</span>
+                  <span class="badge bg-dark"><i class="fas fa-mobile-alt me-1"></i>Desenvolvedor de Aplicações</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Formação -->
+  <!-- Formação Acadêmica -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center">Formação Acadêmica</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100 bg-light animate__animated animate__fadeInUp">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-laptop-code fa-2x text-primary me-3"></i>
+              <div>
+                <h5 class="card-title mb-0">Engenharia Informática</h5>
+                <h6 class="card-subtitle text-muted">Universidade Metodista de Angola</h6>
+              </div>
+            </div>
+            <p class="card-text">2013 - 2019</p>
+            <span class="badge bg-primary">Tecnologia</span>
+            <span class="badge bg-secondary">Desenvolvimento</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-snowflake fa-2x text-info me-3"></i>
+              <div>
+                <h5 class="card-title mb-0">Técnico de Climatização e Frio</h5>
+                <h6 class="card-subtitle text-muted">IMP Pascual Luvualu</h6>
+              </div>
+            </div>
+            <p class="card-text">2010 – 2012</p>
+            <span class="badge bg-info">Técnico</span>
+            <span class="badge bg-dark">Instalações</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100 bg-light animate__animated animate__fadeInUp">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-school fa-2x text-success me-3"></i>
+              <div>
+                <h5 class="card-title mb-0">Ensino de Base</h5>
+                <h6 class="card-subtitle text-muted">Complexo Escolar Santa Teresa</h6>
+              </div>
+            </div>
+            <p class="card-text">1998 – 2009</p>
+            <span class="badge bg-secondary">Educação Geral</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Formação Profissional -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center">Formação Profissional</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100 bg-white animate__animated animate__fadeInUp">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-hard-hat fa-2x text-warning me-3"></i>
+              <div>
+                <h5 class="card-title mb-0">Segurança, Higiene e Saúde no Trabalho</h5>
+                <h6 class="card-subtitle text-muted">Grupo Zahara</h6>
+              </div>
+            </div>
+            <span class="badge bg-success">Segurança</span>
+            <span class="badge bg-warning text-dark">Ambiente de Trabalho</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100 bg-light animate__animated animate__fadeInUp">
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-tools fa-2x text-danger me-3"></i>
+              <div>
+                <h5 class="card-title mb-0">Curso de Hardware</h5>
+                <h6 class="card-subtitle text-muted">Centro Técnico EDOSA</h6>
+              </div>
+            </div>
+            <span class="badge bg-primary">Manutenção</span>
+            <span class="badge bg-info">Infraestrutura</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Idiomas -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center">Idiomas</h2>
+      <div class="row text-center">
+        <div class="col-md-6">
+          <h5>Português</h5><p>Nível: Avançado</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Inglês</h5><p>Nível: Intermédio</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiência -->
+    <section id="experiencia" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title text-center">Experiência Profissional</h2>
+        <div class="timeline position-relative">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Chefe de Divisão de Desenvolvimento de Aplicações - RNT‑EP</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Desde Fev. 2024</h6>
+                  <p class="card-text">Responsável pelo planeamento, execução e liderança da equipa de desenvolvimento de aplicações e software corporativo na Rede Nacional de Transporte de Electricidade (RNT‑EP).</p>
+                  <span class="badge bg-primary">Liderança</span>
+                  <span class="badge bg-secondary">Sistemas</span>
+                  <span class="badge bg-success">Gestão</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Desenvolvedor Mobile - DENTEC</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Mar. 2022 – Nov. 2022</h6>
+                  <p class="card-text">Criação das apps TT-Taxi e Tuie com funcionalidades de rastreio, pagamentos, geolocalização e gerenciamento de corridas.</p>
+                  <span class="badge bg-info">Flutter</span>
+                  <span class="badge bg-warning text-dark">Geolocalização</span>
+                  <span class="badge bg-dark">UI/UX</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Dev Web/Mobile - METODSOFT</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Abr. 2021 – Nov. 2021</h6>
+                  <p class="card-text">Desenvolvimento da app So Vendas e plataforma Consulfarma com foco em e-commerce, geolocalização e entregas.</p>
+                  <span class="badge bg-success">E-commerce</span>
+                  <span class="badge bg-primary">Mobile</span>
+                  <span class="badge bg-secondary">Entregas</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Técnico de HelpDesk - SYSGEST</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Jun. 2019 – Mar. 2021</h6>
+                  <p class="card-text">Atendimento ao cliente, emissão e configuração de cartões RFID, e suporte técnico para software escolar.</p>
+                  <span class="badge bg-info">Suporte</span>
+                  <span class="badge bg-dark">RFID</span>
+                  <span class="badge bg-warning text-dark">Base de Dados</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  <!-- Competências Técnicas -->
+  <!-- Competências Técnicas -->
+<section id="competencias" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center">Competências Técnicas</h2>
+    <div class="row text-center g-4 justify-content-center">
+      <div class="col-md-3">
+        <i class="fab fa-android fa-3x text-success"></i>
+        <h5 class="mt-2">Android Studio</h5>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-code fa-3x text-primary"></i>
+        <h5 class="mt-2">C#</h5>
+      </div>
+      <div class="col-md-3">
+        <i class="fas fa-cogs fa-3x text-dark"></i>
+        <h5 class="mt-2">Umbraco CMS</h5>
+      </div>
+    </div>
+    <div class="row text-center g-4 justify-content-center mt-4">
+      <div class="col-md-2">
+        <i class="fab fa-java fa-2x text-danger"></i>
+        <p>Java</p>
+      </div>
+      <div class="col-md-2">
+        <i class="fas fa-database fa-2x text-secondary"></i>
+        <p>SQL & Firebase</p>
+      </div>
+      <div class="col-md-2">
+        <i class="fab fa-codepen fa-2x text-info"></i>
+        <p>Dart & Flutter</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projetos e Contato permanecem inalterados -->
+   <!-- Projetos -->
+<section id="projetos" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center">Projetos</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+          <img src="img/Tuie.jpeg" class="card-img-top project-img" alt="Tuie Táxi" style="height:200px; object-fit:cover;">
+          <div class="card-body">
+            <h5 class="card-title">Tuie Táxi</h5>
+            <p class="card-text">App de mobilidade com registro, solicitação de corridas, rastreio em tempo real e pagamentos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+          <img src="img/manta.jpeg" class="card-img-top project-img" alt="Manta App" style="height:200px; object-fit:cover;">
+          <div class="card-body">
+            <h5 class="card-title">Manta</h5>
+            <p class="card-text">App para agendamento de serviços de beleza. Permite escolher profissionais, horários e receber notificações.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm border-0">
+          <img src="img/liturgia.jpeg" class="card-img-top project-img" alt="Liturgia da Paz" style="height:200px; object-fit:cover;">
+          <div class="card-body">
+            <h5 class="card-title">Liturgia da Paz</h5>
+            <p class="card-text">App para comissões litúrgicas com calendário, leituras, agenda, grupos, chat e documentos. Desenvolvido em Flutter.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Contato -->
+<section id="contato" class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center">Contato</h2>
+    <form class="mx-auto" style="max-width:600px;">
+      <div class="mb-3">
+        <label class="form-label">Nome</label>
+        <input type="text" class="form-control" placeholder="Seu nome">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" placeholder="email@exemplo.com">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Mensagem</label>
+        <textarea class="form-control" rows="4"></textarea>
+      </div>
+      <button class="btn btn-primary w-100">Enviar</button>
+    </form>
+  </div>
+</section>
+
+  <!-- ... (mantém a seção de projetos e contato como no código anterior) -->
+
+</main>
+
+<!-- Rodapé -->
+<footer>
+  <p>© 2025 Abiúd Mota | Desenvolvedor de Aplicações</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
