@@ -291,3 +291,56 @@ const debouncedScrollHandler = debounce(function() {
 
 window.addEventListener('scroll', debouncedScrollHandler);
 
+
+// ===== PROJECTS SECTION DYNAMIC CONTENT =====
+const projects = [
+  {
+    title: "Liturgia Paz",
+    image: "img/liturgia.jpeg",
+    description: `
+      App Flutter para gerenciamento da comissão de liturgia. Inclui calendário litúrgico com missas e festas, leituras diárias, informações sobre santos, gerenciamento de grupos litúrgicos, agenda de ensaios, chat interno, documentos compartilhados, notificações e controle de acesso. Versão Android/iOS.`,
+    link: "https://github.com/Abmer0One/liturgia_paz"
+  },
+  {
+    title: "Tuie Táxi",
+    image: "img/Tuie.jpeg",
+    description: `
+      Aplicação mobile de serviços de táxi com funcionalidades de localização em tempo real, solicitação de corridas e integração com pagamentos online. Interface intuitiva para condutores e passageiros.`,
+    link: "https://github.com/Abmer0One/tuie_taxi_driver/tree/master"
+  },
+  {
+    title: "MANTA",
+    image: "img/manta.jpeg",
+    description: `
+      Aplicativo de agendamento de serviços de Salão de Beleza e Spa em Luanda. Permite encontrar, comparar e agendar serviços em diferentes salões e spas, com suporte à localização, notificações, histórico de agendamentos e gestão dos profissionais.`,
+    link: "https://github.com/Abmer0One/manta_mobile"
+  }
+];
+
+const container = document.getElementById("projects-container");
+
+projects.forEach((project, index) => {
+  const col = document.createElement("div");
+  col.className = "col-lg-4 col-md-6 fade-in-up";
+
+  col.innerHTML = `
+    <div class="project-card h-100 shadow-sm rounded-3 overflow-hidden" data-bs-toggle="modal" data-bs-target="#projectModal" onclick="showProjectModal(${index})">
+      <img src="${project.image}" alt="${project.title}" class="project-img" />
+      <div class="project-content p-3">
+        <h5 class="mb-2">${project.title}</h5>
+        <p class="text-muted">${project.description.substring(0, 90)}...</p>
+      </div>
+    </div>
+  `;
+
+  container.appendChild(col);
+});
+
+function showProjectModal(index) {
+  const project = projects[index];
+  document.getElementById("projectModalLabel").innerText = project.title;
+  document.getElementById("projectModalImg").src = project.image;
+  document.getElementById("projectModalDescription").innerText = project.description;
+  document.getElementById("projectModalLink").href = project.link;
+}
+// ===== END PROJECT MODAL =====

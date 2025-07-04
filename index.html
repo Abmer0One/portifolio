@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#home">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">Sobre</a>
@@ -41,10 +41,13 @@
                         <a class="nav-link" href="#experience">Experiência</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="#skills">Habilidades</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#services">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projetos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contato</a>
@@ -60,10 +63,10 @@
             <div class="row h-100 align-items-center">
                 <div class="col-lg-6 col-md-12 hero-content">
                     <div class="hero-text">
-                        <h3 class="hero-greeting">Hi There!</h3>
+                        <h3 class="hero-greeting">Olá!</h3>
                         <h1 class="hero-title">Olá, eu sou Abiúd Mota</h1>
                         <p class="hero-subtitle">Engenheiro Informático | Desenvolvedor de Aplicações Web & Mobile</p>
-                        <a href="#services" class="btn btn-primary-custom btn-lg">
+                        <a href="#projects" class="btn btn-primary-custom btn-lg">
                             <i class="fas fa-rocket me-2"></i>Ver Projetos
                         </a>
                     </div>
@@ -79,13 +82,13 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="contact-item">
-                                    <h6>Phone</h6>
+                                    <h6>Telefone</h6>
                                     <p>948 824 600</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="contact-item">
-                                    <h6>Location</h6>
+                                    <h6>Localização</h6>
                                     <p>Luanda, Angola</p>
                                 </div>
                             </div>
@@ -463,6 +466,41 @@
             </div>
         </div>
     </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section py-5 bg-light-custom">
+    <div class="container">
+        <div class="projects-header text-center mb-5">
+        <h2 class="section-title text-dark">Meus Projetos</h2>
+        <p class="section-description text-muted">Alguns dos principais projetos que desenvolvi recentemente.</p>
+        </div>
+        <div class="row g-4" id="projects-container">
+        <!-- Os projetos serão inseridos aqui via JS -->
+        </div>
+    </div>
+
+    <!-- Modal de Projeto -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="projectModalLabel">Detalhes do Projeto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+            <img id="projectModalImg" src="" alt="Imagem do projeto" class="img-fluid mb-3 rounded-3 shadow" />
+            <p id="projectModalDescription" class="text-muted"></p>
+            <a href="#" target="_blank" class="btn btn-primary-custom" id="projectModalLink">
+                <i class="fas fa-external-link-alt me-2"></i>Ver Projeto
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section py-5">
