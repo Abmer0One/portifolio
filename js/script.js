@@ -74,13 +74,14 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
-        const text = heroTitle.textContent;
+        const currentLang = localStorage.getItem('lang') || 'pt';
+        const titleText = translations[currentLang]['hero.title'] || heroTitle.textContent;
         heroTitle.textContent = '';
         
         let i = 0;
         const typeWriter = () => {
-            if (i < text.length) {
-                heroTitle.textContent += text.charAt(i);
+            if (i < titleText.length) {
+                heroTitle.textContent += titleText.charAt(i);
                 i++;
                 setTimeout(typeWriter, 100);
             }
@@ -291,7 +292,6 @@ const debouncedScrollHandler = debounce(function() {
 
 window.addEventListener('scroll', debouncedScrollHandler);
 
-
 // ===== PROJECTS SECTION DYNAMIC CONTENT =====
 const projects = [
   {
@@ -343,4 +343,398 @@ function showProjectModal(index) {
   document.getElementById("projectModalDescription").innerText = project.description;
   document.getElementById("projectModalLink").href = project.link;
 }
-// ===== END PROJECT MODAL =====
+
+// ===== INTERNATIONALIZATION (i18n) SYSTEM =====
+
+const translations = {
+    en: {
+        // Brand
+        "brand": "ABIÚD MOTA",
+        
+        // Navbar
+        "nav.home": "Home",
+        "nav.about": "About",
+        "nav.experience": "Experience",
+        "nav.skills": "Skills",
+        "nav.services": "Services",
+        "nav.projects": "Projects",
+        "nav.contact": "Contact",
+        "nav.language": "Language",
+        "nav.portuguese": "Portuguese",
+        "nav.english": "English",
+
+        // Hero
+        "hero.greeting": "Hi!",
+        "hero.title": "Hi, I'm Abiúd Mota",
+        "hero.subtitle": "Computer Engineer | Web & Mobile Developer",
+        "hero.button": "See Projects",
+        "hero.email": "Email",
+        "hero.phone": "Phone",
+        "hero.location": "Location",
+
+        // About
+        "about.title": "Who am I?",
+        "about.subtitle": "I'm Abiúd Mota, Computer Engineer | Web & Mobile Developer",
+        "about.description": "I'm a passionate application developer with a strong background in Computer Engineering from Universidade Metodista de Angola and experience in major companies like RNT-EP. I focus on building efficient, functional solutions and always seek impactful projects in web, mobile, and enterprise systems.",
+        "about.name": "Name:",
+        "about.age": "Age:",
+        "about.from": "From:",
+        "about.download_cv": "DOWNLOAD CV",
+
+        // Education
+        "education.title": "Education",
+        "education.degree1": "Computer Engineering",
+        "education.school1": "Universidade Metodista de Angola",
+        "education.period1": "2013 - 2019",
+        "education.degree2": "HVAC Technician",
+        "education.school2": "IMP Pascual Luvualu",
+        "education.period2": "2010 - 2012",
+        "education.degree3": "Basic Education",
+        "education.school3": "Complexo Escolar Santa Teresa",
+        "education.period3": "1998 - 2009",
+
+        // Training
+        "training.title": "Professional Training",
+        "training.course1": "Occupational Safety and Health",
+        "training.org1": "Grupo Zahara",
+        "training.course2": "Hardware Course",
+        "training.org2": "Centro Técnico EDOSA",
+
+        // Languages
+        "languages.title": "Languages",
+        "languages.portuguese": "Portuguese",
+        "languages.portuguese_level": "Level: Advanced",
+        "languages.english": "English",
+        "languages.english_level": "Level: Intermediate",
+
+        // Experience
+        "experience.title": "Professional Experience",
+        "experience.rnt.title": "Head of Application Development Division - RNT‑EP",
+        "experience.rnt.period": "Since Feb. 2024",
+        "experience.rnt.desc": "Responsible for planning, executing, and leading the application and corporate software development team at RNT‑EP.",
+        "experience.dentec.title": "Mobile Developer - DENTEC",
+        "experience.dentec.period": "Mar. 2022 – Nov. 2022",
+        "experience.dentec.desc": "Developed TT-Taxi and Tuie apps with tracking, payment, geolocation, and ride management features.",
+        "experience.metodsoft.title": "Web/Mobile Developer - METODSOFT",
+        "experience.metodsoft.period": "Apr. 2021 – Nov. 2021",
+        "experience.metodsoft.desc": "Developed So Vendas app and Consulfarma platform focusing on e-commerce and delivery.",
+        "experience.sysgest.title": "HelpDesk Technician - SYSGEST",
+        "experience.sysgest.period": "Jun. 2019 – Mar. 2021",
+        "experience.sysgest.desc": "Customer support, RFID card issuing and configuration, and support for school software.",
+
+        // Skills
+        "skills.title": "Technical Skills",
+
+        // Services
+        "services.title": "My Services",
+        "services.webdev": "Web Development",
+        "services.webdev_desc": "Modern and responsive web applications using best technologies.",
+        "services.mobiledev": "Mobile Development",
+        "services.mobiledev_desc": "Native and hybrid mobile apps for Android and iOS.",
+        "services.uiux": "UI/UX Design",
+        "services.uiux_desc": "Design of intuitive interfaces and exceptional user experiences.",
+        "services.support": "Technical Support",
+        "services.support_desc": "Expert technical support and maintenance for enterprise systems.",
+        "services.integration": "System Integration",
+        "services.integration_desc": "System integration and corporate solutions.",
+        "services.pm": "Project Management",
+        "services.pm_desc": "IT project management and development team leadership.",
+
+        // Projects
+        "projects.title": "My Projects",
+        "projects.description": "Some of the main projects I've developed recently.",
+        "projects.modal_title": "Project Details",
+        "projects.modal_btn": "See Project",
+
+        // Contact
+        "contact.title": "Get in Touch",
+        "contact.description": "Interested in working with me? Let's talk about your next project!",
+        "contact.email": "Email",
+        "contact.phone": "Phone",
+        "contact.location": "Location",
+        "contact.button": "Send Message",
+
+        // Footer
+        "footer.rights": "All rights reserved."
+    },
+    pt: {
+        // Brand
+        "brand": "ABIÚD MOTA",
+        
+        // Navbar
+        "nav.home": "Início",
+        "nav.about": "Sobre",
+        "nav.experience": "Experiência",
+        "nav.skills": "Competências",
+        "nav.services": "Serviços",
+        "nav.projects": "Projetos",
+        "nav.contact": "Contato",
+        "nav.language": "Idioma",
+        "nav.portuguese": "Português",
+        "nav.english": "Inglês",
+
+        // Hero
+        "hero.greeting": "Olá!",
+        "hero.title": "Olá, eu sou o Abiúd Mota",
+        "hero.subtitle": "Engenheiro Informático | Desenvolvedor de Aplicações Web & Mobile",
+        "hero.button": "Ver Projetos",
+        "hero.email": "Email",
+        "hero.phone": "Telefone",
+        "hero.location": "Localização",
+
+        // About
+        "about.title": "Quem sou eu?",
+        "about.subtitle": "Sou Abiúd Mota, Engenheiro Informático | Desenvolvedor de Aplicações Web & Mobile",
+        "about.description": "Sou um desenvolvedor de aplicações apaixonado por tecnologia e inovação. Com sólida formação em Engenharia Informática pela Universidade Metodista de Angola e experiência em grandes empresas como a RNT-EP, busco sempre criar soluções técnicas eficientes e funcionais. Minha trajetória profissional reflete o compromisso com a qualidade, a aprendizagem contínua e o desejo constante de contribuir para projetos impactantes nas áreas de desenvolvimento web, mobile e sistemas corporativos.",
+        "about.name": "Nome:",
+        "about.age": "Idade:",
+        "about.from": "de:",
+        "about.download_cv": "BAIXAR CV",
+
+        // Education
+        "education.title": "Formação Acadêmica",
+        "education.degree1": "Engenharia Informática",
+        "education.school1": "Universidade Metodista de Angola",
+        "education.period1": "2013 - 2019",
+        "education.degree2": "Técnico de Climatização e Frio",
+        "education.school2": "IMP Pascual Luvualu",
+        "education.period2": "2010 – 2012",
+        "education.degree3": "Ensino de Base",
+        "education.school3": "Complexo Escolar Santa Teresa",
+        "education.period3": "1998 – 2009",
+
+        // Training
+        "training.title": "Formação Profissional",
+        "training.course1": "Segurança, Higiene e Saúde no Trabalho",
+        "training.org1": "Grupo Zahara",
+        "training.course2": "Curso de Hardware",
+        "training.org2": "Centro Técnico EDOSA",
+
+        // Languages
+        "languages.title": "Idiomas",
+        "languages.portuguese": "Português",
+        "languages.portuguese_level": "Nível: Avançado",
+        "languages.english": "Inglês",
+        "languages.english_level": "Nível: Intermédio",
+
+        // Experience
+        "experience.title": "Experiência Profissional",
+        "experience.rnt.title": "Chefe de Divisão de Desenvolvimento de Aplicações - RNT‑EP",
+        "experience.rnt.period": "Desde Fev. 2024",
+        "experience.rnt.desc": "Responsável pelo planeamento, execução e liderança da equipa de desenvolvimento de aplicações e software corporativo na Rede Nacional de Transporte de Electricidade (RNT‑EP).",
+        "experience.dentec.title": "Desenvolvedor Mobile - DENTEC",
+        "experience.dentec.period": "Mar. 2022 – Nov. 2022",
+        "experience.dentec.desc": "Criação das apps TT-Taxi e Tuie com funcionalidades de rastreio, pagamentos, geolocalização e gerenciamento de corridas.",
+        "experience.metodsoft.title": "Dev Web/Mobile - METODSOFT",
+        "experience.metodsoft.period": "Abr. 2021 – Nov. 2021",
+        "experience.metodsoft.desc": "Desenvolvimento da app So Vendas e plataforma Consulfarma com foco em e-commerce, geolocalização e entregas.",
+        "experience.sysgest.title": "Técnico de HelpDesk - SYSGEST",
+        "experience.sysgest.period": "Jun. 2019 – Mar. 2021",
+        "experience.sysgest.desc": "Atendimento ao cliente, emissão e configuração de cartões RFID, e suporte técnico para software escolar.",
+
+        // Skills
+        "skills.title": "Competências Técnicas",
+
+        // Services
+        "services.title": "Meus Serviços",
+        "services.webdev": "Web Development",
+        "services.webdev_desc": "Desenvolvimento de aplicações web modernas e responsivas usando as melhores tecnologias.",
+        "services.mobiledev": "Mobile Development",
+        "services.mobiledev_desc": "Criação de aplicações mobile nativas e híbridas para Android e iOS.",
+        "services.uiux": "UI/UX Design",
+        "services.uiux_desc": "Design de interfaces intuitivas e experiências de usuário excepcionais.",
+        "services.support": "Technical Support",
+        "services.support_desc": "Suporte técnico especializado e manutenção de sistemas corporativos.",
+        "services.integration": "System Integration",
+        "services.integration_desc": "Integração de sistemas e desenvolvimento de soluções corporativas.",
+        "services.pm": "Project Management",
+        "services.pm_desc": "Gestão de projetos de tecnologia e liderança de equipas de desenvolvimento.",
+
+        // Projects
+        "projects.title": "Meus Projetos",
+        "projects.description": "Alguns dos principais projetos que desenvolvi recentemente.",
+        "projects.modal_title": "Detalhes do Projeto",
+        "projects.modal_btn": "Ver Projeto",
+
+        // Contact
+        "contact.title": "Entre em Contato",
+        "contact.description": "Interessado em trabalhar comigo? Vamos conversar sobre seu próximo projeto!",
+        "contact.email": "Email",
+        "contact.phone": "Telefone",
+        "contact.location": "Localização",
+        "contact.button": "Enviar Mensagem",
+
+        // Footer
+        "footer.rights": "Todos os direitos reservados."
+    }
+};
+
+// ===== i18n FUNCTIONS WITH IMPROVEMENTS =====
+
+function setLanguage(lang) {
+    // Validate language
+    if (!translations[lang]) {
+        console.warn(`Language '${lang}' not supported. Falling back to 'pt'.`);
+        lang = 'pt';
+    }
+    
+    localStorage.setItem('lang', lang);
+    applyTranslations(lang);
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = lang;
+    
+    // Show language change notification
+    showLanguageChangeNotification(lang);
+}
+
+function applyTranslations(lang) {
+    // Add fade effect during translation
+    document.body.style.transition = 'opacity 0.3s ease';
+    document.body.style.opacity = '0.8';
+    
+    setTimeout(() => {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            const translation = getTranslation(key, lang);
+            
+            if (translation) {
+                // Animate text change
+                el.style.transition = 'opacity 0.2s ease';
+                el.style.opacity = '0';
+                
+                setTimeout(() => {
+                    el.textContent = translation;
+                    el.style.opacity = '1';
+                }, 100);
+            }
+        });
+        
+        // Restore body opacity
+        setTimeout(() => {
+            document.body.style.opacity = '1';
+        }, 200);
+        
+    }, 100);
+}
+
+function getTranslation(key, lang) {
+    // Get translation with fallback
+    if (translations[lang] && translations[lang][key]) {
+        return translations[lang][key];
+    }
+    
+    // Fallback to Portuguese if English translation not found
+    if (lang === 'en' && translations['pt'] && translations['pt'][key]) {
+        console.warn(`Translation for '${key}' not found in English. Using Portuguese fallback.`);
+        return translations['pt'][key];
+    }
+    
+    // Fallback to English if Portuguese translation not found
+    if (lang === 'pt' && translations['en'] && translations['en'][key]) {
+        console.warn(`Translation for '${key}' not found in Portuguese. Using English fallback.`);
+        return translations['en'][key];
+    }
+    
+    // If no translation found, return the key itself
+    console.warn(`Translation for '${key}' not found in any language.`);
+    return key;
+}
+
+function showLanguageChangeNotification(lang) {
+    const notification = document.createElement('div');
+    notification.className = 'language-notification';
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: var(--primary-color);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 212, 170, 0.3);
+        z-index: 9999;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        font-size: 14px;
+        font-weight: 500;
+    `;
+    
+    const langName = lang === 'pt' ? 'Português' : 'English';
+    const flag = lang === 'pt' ? '🇵🇹' : '🇬🇧';
+    notification.innerHTML = `${flag} ${langName}`;
+    
+    document.body.appendChild(notification);
+    
+    // Animate in
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Animate out and remove
+    setTimeout(() => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 300);
+    }, 2000);
+}
+
+// ===== INITIALIZE i18n ON PAGE LOAD =====
+document.addEventListener("DOMContentLoaded", () => {
+    const lang = localStorage.getItem('lang') || 'pt';
+    applyTranslations(lang);
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = lang;
+    
+    // Update typing effect with correct language
+    setTimeout(() => {
+        const heroTitle = document.querySelector('.hero-title');
+        if (heroTitle) {
+            const titleText = getTranslation('hero.title', lang);
+            heroTitle.textContent = '';
+            
+            let i = 0;
+            const typeWriter = () => {
+                if (i < titleText.length) {
+                    heroTitle.textContent += titleText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            };
+            
+            setTimeout(typeWriter, 1000);
+        }
+    }, 500);
+});
+
+// ===== CSS ANIMATIONS FOR LANGUAGE TRANSITIONS =====
+const style = document.createElement('style');
+style.textContent = `
+    .language-transition {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .language-transition.changing {
+        opacity: 0.7;
+        transform: scale(0.98);
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .fade-in-up {
+        animation: fadeInUp 0.6s ease forwards;
+    }
+`;
+document.head.appendChild(style);
+
