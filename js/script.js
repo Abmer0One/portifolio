@@ -382,6 +382,8 @@ const translations = {
         "training.org3": "Academia BAI",
         "training.course4": "Productivity with Artificial Intelligence",
         "training.org4": "Academia BAI",
+        "training.course5": "Data Forensics Processing, Analysis and Visualization Program",
+        "training.org5": "Deloitte",
 
         // Languages
         "languages.title": "Languages",
@@ -496,6 +498,8 @@ const translations = {
         "training.org3": "Academia BAI",
         "training.course4": "Productividade com Inteligência Artificial",
         "training.org4": "Academia BAI",
+        "training.course5": "Programa em tratamento, análise e visualização forense de dados",
+        "training.org5": "Deloitte",
 
         // Languages
         "languages.title": "Idiomas",
