@@ -70,27 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// ===== TYPING EFFECT FOR HERO TITLE =====
-document.addEventListener('DOMContentLoaded', function() {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const currentLang = localStorage.getItem('lang') || 'pt';
-        const titleText = translations[currentLang]['hero.title'] || heroTitle.textContent;
-        heroTitle.textContent = '';
-        
-        let i = 0;
-        const typeWriter = () => {
-            if (i < titleText.length) {
-                heroTitle.textContent += titleText.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            }
-        };
-        
-        setTimeout(typeWriter, 1000);
-    }
-});
-
 // ===== PARALLAX EFFECT FOR HERO SECTION =====
 window.addEventListener('scroll', function() {
     const scrolled = window.pageYOffset;
