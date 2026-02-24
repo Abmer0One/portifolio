@@ -70,6 +70,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// ===== TYPING EFFECT FOR HERO TITLE =====
+document.addEventListener('DOMContentLoaded', function() {
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) {
+        const currentLang = localStorage.getItem('lang') || 'pt';
+        const titleText = translations[currentLang]['hero.title'] || heroTitle.textContent;
+        heroTitle.textContent = '';
+        
+        let i = 0;
+        const typeWriter = () => {
+            if (i < titleText.length) {
+                heroTitle.textContent += titleText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        };
+        
+        setTimeout(typeWriter, 1000);
+    }
+});
+
 // ===== PARALLAX EFFECT FOR HERO SECTION =====
 window.addEventListener('scroll', function() {
     const scrolled = window.pageYOffset;
@@ -374,14 +395,10 @@ const translations = {
 
         // Training
         "training.title": "Professional Training",
-        "training.course1": "ITIL 4 Foundation",
-        "training.org1": "Assertiva",
-        "training.course2": "Cybersecurity Fundamentals",
-        "training.org2": "Hanzolo Technology, Systems & Security Lda",
-        "training.course3": "Corporate Governance and Change Management",
-        "training.org3": "Academia BAI",
-        "training.course4": "Productivity with Artificial Intelligence",
-        "training.org4": "Academia BAI",
+        "training.course1": "Occupational Safety and Health",
+        "training.org1": "Grupo Zahara",
+        "training.course2": "Hardware Course",
+        "training.org2": "Centro Técnico EDOSA",
 
         // Languages
         "languages.title": "Languages",
@@ -488,14 +505,10 @@ const translations = {
 
         // Training
         "training.title": "Formação Profissional",
-        "training.course1": "ITIL 4 Foundation",
-        "training.org1": "Assertiva",
-        "training.course2": "Fundamentos de Cibersegurança",
-        "training.org2": "Hanzolo Tecnologia, Sistemas & Segurança Lda",
-        "training.course3": "Governança Corporativa e Gestão da Mudança",
-        "training.org3": "Academia BAI",
-        "training.course4": "Productividade com Inteligência Artificial",
-        "training.org4": "Academia BAI",
+        "training.course1": "Segurança, Higiene e Saúde no Trabalho",
+        "training.org1": "Grupo Zahara",
+        "training.course2": "Curso de Hardware",
+        "training.org2": "Centro Técnico EDOSA",
 
         // Languages
         "languages.title": "Idiomas",
@@ -669,12 +682,6 @@ function showLanguageChangeNotification(lang) {
 
 // ===== INITIALIZE i18n ON PAGE LOAD =====
 document.addEventListener("DOMContentLoaded", () => {
-    // Update current year in footer
-    const currentYearElement = document.getElementById('current-year');
-    if (currentYearElement) {
-        currentYearElement.textContent = new Date().getFullYear();
-    }
-    
     const lang = localStorage.getItem('lang') || 'pt';
     applyTranslations(lang);
     
