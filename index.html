@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abiúd Mota | Portfólio</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-code text-primary me-2"></i><span data-i18n="brand">ABIÚD MOTA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home" data-i18n="nav.home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav.about">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience" data-i18n="nav.experience">Experiência</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav.skills">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services" data-i18n="nav.services">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav.projects">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">Contato</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html" id="languageDropdown" role="button" data-bs-toggle="dropdown">
+                            🌐 <span data-i18n="nav.language">Idioma</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="setLanguage('pt')">🇵🇹 <span data-i18n="nav.portuguese">Português</span></a></li>
+                            <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">🇬🇧 <span data-i18n="nav.english">English</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container-fluid h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6 col-md-12 hero-content">
+                    <div class="hero-text">
+                        <h3 class="hero-greeting" data-i18n="hero.greeting">Olá!</h3>
+                        <h1 class="hero-title" data-i18n="hero.title">Olá, eu sou o Abiúd Mota</h1>
+                        <p class="hero-subtitle" data-i18n="hero.subtitle">Engenheiro Informático | Desenvolvedor de Aplicações Web & Mobile</p>
+                        <a href="#projects" class="btn btn-primary-custom btn-lg">
+                            <i class="fas fa-rocket me-2"></i><span data-i18n="hero.button">Ver Projetos</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="contact-info-hero">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="contact-item">
+                                    <h6 data-i18n="hero.email">Email</h6>
+                                    <p>abiudmota2010@live.com.pt</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contact-item">
+                                    <h6 data-i18n="hero.phone">Telefone</h6>
+                                    <p>948 824 600</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="contact-item">
+                                    <h6 data-i18n="hero.location">Localização</h6>
+                                    <p>Luanda, Angola</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 hero-image">
+                    <div class="hero-img-container">
+                        <img src="img/abiud_mota.jpeg" alt="Abiúd Mota" class="img-fluid hero-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
+                    <div class="about-img-container">
+                        <img src="img/abiud_mota.jpeg" alt="Abiúd Mota" class="img-fluid about-img">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <div class="about-content">
+                        <h3 class="section-subtitle" data-i18n="about.title">Quem sou eu?</h3>
+                        <h2 class="section-title" data-i18n="about.subtitle">Sou Abiúd Mota, Engenheiro Informático | Desenvolvedor de Aplicações Web & Mobile</h2>
+                        <p class="about-description" data-i18n="about.description">
+                            Sou um desenvolvedor de aplicações apaixonado por tecnologia e inovação. Com sólida formação em Engenharia Informática pela Universidade Metodista de Angola e experiência em grandes empresas como a RNT-EP, busco sempre criar soluções técnicas eficientes e funcionais. Minha trajetória profissional reflete o compromisso com a qualidade, a aprendizagem contínua e o desejo constante de contribuir para projetos impactantes nas áreas de desenvolvimento web, mobile e sistemas corporativos.
+                        </p>
+                        
+                        <div class="about-details">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="detail-item">
+                                        <span class="detail-label" data-i18n="about.name">Nome:</span>
+                                        <span class="detail-value">Abiúd Mota da Costa</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label" data-i18n="about.age">Idade:</span>
+                                        <span class="detail-value">32</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="detail-item">
+                                        <span class="detail-label" data-i18n="about.from">de:</span>
+                                        <span class="detail-value">Luanda, Angola</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Email:</span>
+                                        <span class="detail-value">abiudmota2010@live.com.pt</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="cv/cv_abiud_mota.pdf" class="btn btn-primary-custom mt-4" download>
+                            <i class="fas fa-download me-2"></i><span data-i18n="about.download_cv">BAIXAR CV</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section py-5 bg-light-custom">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-i18n="education.title">Formação Acadêmica</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="education-card">
+                        <div class="card-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h5 class="card-title" data-i18n="education.degree1">Engenharia Informática</h5>
+                        <h6 class="card-subtitle" data-i18n="education.school1">Universidade Metodista de Angola</h6>
+                        <p class="card-period" data-i18n="education.period1">2013 - 2019</p>
+                        <div class="card-badges">
+                            <span class="badge">Tecnologia</span>
+                            <span class="badge">Desenvolvimento</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="education-card">
+                        <div class="card-icon">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <h5 class="card-title" data-i18n="education.degree2">Técnico de Climatização e Frio</h5>
+                        <h6 class="card-subtitle" data-i18n="education.school2">IMP Pascual Luvualu</h6>
+                        <p class="card-period" data-i18n="education.period2">2010 – 2012</p>
+                        <div class="card-badges">
+                            <span class="badge">Técnico</span>
+                            <span class="badge">Instalações</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="education-card">
+                        <div class="card-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h5 class="card-title" data-i18n="education.degree3">Ensino de Base</h5>
+                        <h6 class="card-subtitle" data-i18n="education.school3">Complexo Escolar Santa Teresa</h6>
+                        <p class="card-period" data-i18n="education.period3">1998 – 2009</p>
+                        <div class="card-badges">
+                            <span class="badge">Educação Geral</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Training Section -->
+    <section id="training" class="training-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-i18n="training.title">Formação Profissional</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-5 col-md-6">
+                    <div class="training-card">
+                        <div class="card-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h5 class="card-title" data-i18n="training.course1">ITIL 4 Foundation</h5>
+                        <h6 class="card-subtitle" data-i18n="training.org1">Assertiva</h6>
+                        <div class="card-badges">
+                            <span class="badge">IT Service Management</span>
+                            <span class="badge">Framework</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="training-card">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h5 class="card-title" data-i18n="training.course2">Fundamentos de Cibersegurança</h5>
+                        <h6 class="card-subtitle" data-i18n="training.org2">Hanzolo Tecnologia, Sistemas & Segurança Lda</h6>
+                        <div class="card-badges">
+                            <span class="badge">Segurança</span>
+                            <span class="badge">Cybersecurity</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="training-card">
+                        <div class="card-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h5 class="card-title" data-i18n="training.course3">Governança Corporativa e Gestão da Mudança</h5>
+                        <h6 class="card-subtitle" data-i18n="training.org3">Academia BAI</h6>
+                        <div class="card-badges">
+                            <span class="badge">Governança</span>
+                            <span class="badge">Gestão</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="training-card">
+                        <div class="card-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h5 class="card-title" data-i18n="training.course4">Productividade com Inteligência Artificial</h5>
+                        <h6 class="card-subtitle" data-i18n="training.org4">Academia BAI</h6>
+                        <div class="card-badges">
+                            <span class="badge">IA</span>
+                            <span class="badge">Produtividade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="languages-section py-5 bg-light-custom">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-i18n="languages.title">Idiomas</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="language-item">
+                        <i class="fas fa-globe fa-3x mb-3"></i>
+                        <h5 data-i18n="languages.portuguese">Português</h5>
+                        <p data-i18n="languages.portuguese_level">Nível: Avançado</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="language-item">
+                        <i class="fas fa-language fa-3x mb-3"></i>
+                        <h5 data-i18n="languages.english">Inglês</h5>
+                        <p data-i18n="languages.english_level">Nível: Intermédio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-i18n="experience.title">Experiência Profissional</h2>
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-12">
+                    <div class="experience-card">
+                        <h5 class="card-title" data-i18n="experience.rnt.title">Chefe de Divisão de Desenvolvimento de Aplicações - RNT‑EP</h5>
+                        <h6 class="card-subtitle" data-i18n="experience.rnt.period">Desde Fev. 2024</h6>
+                        <p class="card-description" data-i18n="experience.rnt.desc">Responsável pelo planeamento, execução e liderança da equipa de desenvolvimento de aplicações e software corporativo na Rede Nacional de Transporte de Electricidade (RNT‑EP).</p>
+                        <div class="card-badges">
+                            <span class="badge">Liderança</span>
+                            <span class="badge">Sistemas</span>
+                            <span class="badge">Gestão</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="experience-card">
+                        <h5 class="card-title" data-i18n="experience.dentec.title">Desenvolvedor Mobile - DENTEC</h5>
+                        <h6 class="card-subtitle" data-i18n="experience.dentec.period">Mar. 2022 – Nov. 2022</h6>
+                        <p class="card-description" data-i18n="experience.dentec.desc">Criação das apps TT-Taxi e Tuie com funcionalidades de rastreio, pagamentos, geolocalização e gerenciamento de corridas.</p>
+                        <div class="card-badges">
+                            <span class="badge">Flutter</span>
+                            <span class="badge">Geolocalização</span>
+                            <span class="badge">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="experience-card">
+                        <h5 class="card-title" data-i18n="experience.metodsoft.title">Dev Web/Mobile - METODSOFT</h5>
+                        <h6 class="card-subtitle" data-i18n="experience.metodsoft.period">Abr. 2021 – Nov. 2021</h6>
+                        <p class="card-description" data-i18n="experience.metodsoft.desc">Desenvolvimento da app So Vendas e plataforma Consulfarma com foco em e-commerce, geolocalização e entregas.</p>
+                        <div class="card-badges">
+                            <span class="badge">E-commerce</span>
+                            <span class="badge">Mobile</span>
+                            <span class="badge">Entregas</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="experience-card">
+                        <h5 class="card-title" data-i18n="experience.sysgest.title">Técnico de HelpDesk - SYSGEST</h5>
+                        <h6 class="card-subtitle" data-i18n="experience.sysgest.period">Jun. 2019 – Mar. 2021</h6>
+                        <p class="card-description" data-i18n="experience.sysgest.desc">Atendimento ao cliente, emissão e configuração de cartões RFID, e suporte técnico para software escolar.</p>
+                        <div class="card-badges">
+                            <span class="badge">Suporte</span>
+                            <span class="badge">RFID</span>
+                            <span class="badge">Base de Dados</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section py-5 bg-light-custom">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-i18n="skills.title">Competências Técnicas</h2>
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <i class="fab fa-android fa-3x mb-3"></i>
+                        <h5>Android Studio</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <i class="fas fa-code fa-3x mb-3"></i>
+                        <h5>C#</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <i class="fas fa-cogs fa-3x mb-3"></i>
+                        <h5>Umbraco CMS</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <i class="fab fa-flutter fa-3x mb-3"></i>
+                        <h5>Flutter</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <i class="fab fa-java fa-3x mb-3"></i>
+                        <h5>Java</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <i class="fas fa-database fa-3x mb-3"></i>
+                        <h5>SQL & Firebase</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <i class="fab fa-js-square fa-3x mb-3"></i>
+                        <h5>JavaScript</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <i class="fab fa-html5 fa-3x mb-3"></i>
+                        <h5>HTML5</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt fa-3x mb-3"></i>
+                        <h5>CSS3</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <i class="fas fa-server fa-3x mb-3"></i>
+                        <h5>SQL Server</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <i class="fab fa-php fa-3x mb-3"></i>
+                        <h5>PHP</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="skill-item">
+                        <i class="fab fa-python fa-3x mb-3"></i>
+                        <h5>Python</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section py-5">
+        <div class="container">
+            <div class="services-header text-center mb-5">
+                <h2 class="section-title" data-i18n="services.title">Meus Serviços</h2>
+                <div class="services-bg-text">SERVIÇOS</div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h5 class="service-title" data-i18n="services.webdev">Web Development</h5>
+                        <p class="service-description" data-i18n="services.webdev_desc">Desenvolvimento de aplicações web modernas e responsivas usando as melhores tecnologias.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h5 class="service-title" data-i18n="services.mobiledev">Mobile Development</h5>
+                        <p class="service-description" data-i18n="services.mobiledev_desc">Criação de aplicações mobile nativas e híbridas para Android e iOS.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h5 class="service-title" data-i18n="services.uiux">UI/UX Design</h5>
+                        <p class="service-description" data-i18n="services.uiux_desc">Design de interfaces intuitivas e experiências de usuário excepcionais.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h5 class="service-title" data-i18n="services.support">Technical Support</h5>
+                        <p class="service-description" data-i18n="services.support_desc">Suporte técnico especializado e manutenção de sistemas corporativos.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h5 class="service-title" data-i18n="services.integration">System Integration</h5>
+                        <p class="service-description" data-i18n="services.integration_desc">Integração de sistemas e desenvolvimento de soluções corporativas.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h5 class="service-title" data-i18n="services.pm">Project Management</h5>
+                        <p class="service-description" data-i18n="services.pm_desc">Gestão de projetos de tecnologia e liderança de equipas de desenvolvimento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section py-5 bg-light-custom">
+    <div class="container">
+        <div class="projects-header text-center mb-5">
+        <h2 class="section-title text-dark" data-i18n="projects.title">Meus Projetos</h2>
+        <p class="section-description text-muted" data-i18n="projects.description">Alguns dos principais projetos que desenvolvi recentemente.</p>
+        </div>
+        <div class="row g-4" id="projects-container">
+        <!-- Os projetos serão inseridos aqui via JS -->
+        </div>
+    </div>
+
+    <!-- Modal de Projeto -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="projectModalLabel" data-i18n="projects.modal_title">Detalhes do Projeto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+            <img id="projectModalImg" src="" alt="Imagem do projeto" class="img-fluid mb-3 rounded-3 shadow" />
+            <p id="projectModalDescription" class="text-muted"></p>
+            <a href="#" target="_blank" class="btn btn-primary-custom" id="projectModalLink">
+                <i class="fas fa-external-link-alt me-2"></i><span data-i18n="projects.modal_btn">Ver Projeto</span>
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-i18n="contact.title">Entre em Contato</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-content text-center">
+                        <p class="contact-description mb-4" data-i18n="contact.description">
+                            Interessado em trabalhar comigo? Vamos conversar sobre seu próximo projeto!
+                        </p>
+                        <div class="contact-info-grid">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="contact-info-item">
+                                        <i class="fas fa-envelope fa-2x mb-3"></i>
+                                        <h6 data-i18n="contact.email">Email</h6>
+                                        <p>abiudmota2010@live.com.pt</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="contact-info-item">
+                                        <i class="fas fa-phone fa-2x mb-3"></i>
+                                        <h6 data-i18n="contact.phone">Telefone</h6>
+                                        <p>948 824 600 / 952 058 065</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="contact-info-item">
+                                        <i class="fas fa-map-marker-alt fa-2x mb-3"></i>
+                                        <h6 data-i18n="contact.location">Localização</h6>
+                                        <p>Golf 2, Luanda</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="mailto:abiudmota2010@live.com.pt" class="btn btn-primary-custom btn-lg mt-4">
+                            <i class="fas fa-paper-plane me-2"></i><span data-i18n="contact.button">Enviar Mensagem</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; <span id="current-year">2025</span> Abiúd Mota. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/abi%C3%BAd-mota-b9500760/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Abmer0One" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+
