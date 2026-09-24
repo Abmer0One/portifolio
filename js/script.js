@@ -276,19 +276,19 @@ const projects = [
   {
     id: "dcs",
     title: "DCS — Qualificação de Fornecedores",
-    badge: "RNT-EP",
+    badge: "Enterprise",
     image: "img/dcs.jpeg",
     tags: [".NET 8", "Blazor WASM", "SQL Server", "CQRS / MediatR", "Active Directory", "SHA-256 Audit"],
     isCorporate: true,
     link: null,
     descriptionShort: {
-      pt: "Plataforma corporativa que digitaliza todo o processo de qualificação de fornecedores da RNT-EP: candidaturas online, análise técnica, fluxos A/B/C, relatórios PDF automáticos e auditoria imutável com cadeia SHA-256.",
-      en: "Enterprise platform digitalizing RNT-EP's vendor qualification workflow: online applications, technical evaluation, A/B/C flows, automated PDF reports, and immutable SHA-256 audit chaining."
+      pt: "Plataforma corporativa que digitaliza todo o processo de qualificação de fornecedores de uma grande empresa do setor energético: candidaturas online, análise técnica, fluxos A/B/C, relatórios PDF automáticos e auditoria imutável com cadeia SHA-256.",
+      en: "Enterprise platform digitalizing the vendor qualification workflow for a major national energy utility: online applications, technical evaluation, A/B/C flows, automated PDF reports, and immutable SHA-256 audit chaining."
     },
     details: {
       pt: `
         <h6 class="case-study-heading"><i class="fas fa-info-circle me-2"></i>Contexto</h6>
-        <p class="case-study-text">Digitalização ponta-a-ponta do processo de qualificação de fornecedores da RNT-EP, regulado pelo Despacho n.º 59/GPCA/2018 — substituindo processos manuais e despachos em papel por um fluxo único, centralizado e totalmente rastreável.</p>
+        <p class="case-study-text">Digitalização ponta-a-ponta do processo de qualificação e homologação de fornecedores de uma grande empresa do setor energético nacional — substituindo processos manuais e despachos físicos em papel por um fluxo único, centralizado e totalmente rastreável.</p>
         <h6 class="case-study-heading"><i class="fas fa-microchip me-2"></i>Destaques Técnicos</h6>
         <ul class="case-study-list">
           <li>Backend .NET 8 com Minimal APIs, arquitetura Vertical Slice e CQRS (MediatR)</li>
@@ -300,10 +300,10 @@ const projects = [
           <li>Frontend SPA em Blazor WebAssembly com AntDesign e rotas protegidas por permissões</li>
         </ul>
         <h6 class="case-study-heading"><i class="fas fa-user-tie me-2"></i>Meu Papel</h6>
-        <p class="case-study-text">Arquiteto da Solução e Desenvolvedor Full-Stack, com liderança técnica da equipa de desenvolvimento da RNT-EP.</p>`,
+        <p class="case-study-text">Arquiteto da Solução e Desenvolvedor Full-Stack, com liderança técnica da equipa de desenvolvimento de aplicações.</p>`,
       en: `
         <h6 class="case-study-heading"><i class="fas fa-info-circle me-2"></i>Context</h6>
-        <p class="case-study-text">End-to-end digitalization of RNT-EP's vendor qualification process, regulated by Order no. 59/GPCA/2018 — replacing manual workflows and paper-based dispatches with a single, centralized and fully traceable flow.</p>
+        <p class="case-study-text">End-to-end digitalization of the vendor qualification and compliance workflow for a major national energy utility — replacing manual processes and paper-based dispatches with a single, centralized and fully traceable flow.</p>
         <h6 class="case-study-heading"><i class="fas fa-microchip me-2"></i>Technical Highlights</h6>
         <ul class="case-study-list">
           <li>.NET 8 backend with Minimal APIs, Vertical Slice architecture and CQRS (MediatR)</li>
@@ -315,13 +315,13 @@ const projects = [
           <li>Blazor WebAssembly SPA frontend with AntDesign and permission-protected routes</li>
         </ul>
         <h6 class="case-study-heading"><i class="fas fa-user-tie me-2"></i>My Role</h6>
-        <p class="case-study-text">Solution Architect and Full-Stack Developer, providing technical leadership to RNT-EP's development team.</p>`
+        <p class="case-study-text">Solution Architect and Full-Stack Developer, providing technical leadership to the application engineering team.</p>`,
     }
   },
   {
     id: "rntsurvey",
     title: "RNTSurvey — Inquéritos Corporativos",
-    badge: "RNT-EP",
+    badge: "Enterprise",
     image: "img/rnt_survey.jpeg",
     tags: [".NET 9", "ASP.NET Core MVC", "SQL Server", "Clean Architecture", "Active Directory", "Chart.js", "QuestPDF"],
     isCorporate: true,
@@ -333,7 +333,7 @@ const projects = [
     details: {
       pt: `
         <h6 class="case-study-heading"><i class="fas fa-info-circle me-2"></i>Contexto</h6>
-        <p class="case-study-text">Instrumento centralizado para diagnósticos organizacionais da RNT-EP — inquéritos internos com integridade de dados garantida, eliminando folhas de cálculo dispersas e respostas duplicadas.</p>
+        <p class="case-study-text">Instrumento centralizado para diagnósticos organizacionais e inquéritos corporativos de grande porte — com integridade de dados garantida, eliminando folhas de cálculo dispersas e respostas duplicadas.</p>
         <h6 class="case-study-heading"><i class="fas fa-microchip me-2"></i>Destaques Técnicos</h6>
         <ul class="case-study-list">
           <li>Clean Architecture em 4 camadas (Domain, Application, Infrastructure e Web), com Repository Pattern e Unit of Work</li>
@@ -347,7 +347,7 @@ const projects = [
         <p class="case-study-text">Concepção, arquitetura de software e desenvolvimento full-stack em C# / .NET 9.</p>`,
       en: `
         <h6 class="case-study-heading"><i class="fas fa-info-circle me-2"></i>Context</h6>
-        <p class="case-study-text">A centralized instrument for RNT-EP's organizational diagnostics — internal surveys with guaranteed data integrity, eliminating scattered spreadsheets and duplicated responses.</p>
+        <p class="case-study-text">A centralized instrument for organizational diagnostics and enterprise surveys — guaranteeing data integrity while eliminating scattered spreadsheets and duplicate responses.</p>
         <h6 class="case-study-heading"><i class="fas fa-microchip me-2"></i>Technical Highlights</h6>
         <ul class="case-study-list">
           <li>Clean Architecture across 4 layers (Domain, Application, Infrastructure and Web) with Repository Pattern and Unit of Work</li>
@@ -532,7 +532,7 @@ function showProjectModal(index) {
     // Smart action: corporate projects get an internal-system note, others get a GitHub link
     let actionHtml;
     if (project.isCorporate) {
-        actionHtml = `<span class="modal-corporate-note"><i class="fas fa-lock me-2"></i>${t['projects.corporate_internal'] || 'Sistema Corporativo Interno (RNT-EP)'}</span>`;
+        actionHtml = `<span class="modal-corporate-note"><i class="fas fa-lock me-2"></i>${t['projects.corporate_internal'] || 'Sistema Corporativo Interno'}</span>`;
     } else {
         actionHtml = `<a href="${project.link}" target="_blank" rel="noopener noreferrer" class="btn btn-primary-custom"><i class="fab fa-github me-2"></i>${t['projects.view_github'] || 'Ver no GitHub'}</a>`;
     }
@@ -696,7 +696,7 @@ const translations = {
         "projects.title": "Selected Projects",
         "projects.description": "Case studies of applications I developed, with details on the problem, process and outcome.",
         "projects.view_details": "View details",
-        "projects.corporate_internal": "Internal Corporate System (RNT-EP)",
+        "projects.corporate_internal": "Internal Enterprise System",
         "projects.view_github": "View on GitHub",
         "projects.close": "Close",
 
@@ -829,7 +829,7 @@ const translations = {
         "projects.title": "Projetos Selecionados",
         "projects.description": "Casos de estudo de aplicações que desenvolvi, com detalhe sobre o problema, o processo e o resultado.",
         "projects.view_details": "Ver detalhes",
-        "projects.corporate_internal": "Sistema Corporativo Interno (RNT-EP)",
+        "projects.corporate_internal": "Sistema Corporativo Interno",
         "projects.view_github": "Ver no GitHub",
         "projects.close": "Fechar",
 
