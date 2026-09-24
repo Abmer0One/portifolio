@@ -362,6 +362,63 @@ const projects = [
     }
   },
   {
+    id: "webbiometric",
+    title: "WebBiometric — Gestão de Ponto Biométrico",
+    badge: "Enterprise",
+    image: "img/webbiometric.jpeg",
+    tags: [".NET 8", "C#", "ASP.NET Core MVC", "Web API", "Apache Thrift", "Background Services", "Hardware Integration", "SQL Server"],
+    isCorporate: true,
+    link: null,
+    descriptionShort: {
+      pt: "Plataforma web corporativa em .NET 8 para gestão centralizada de terminais biométricos Sigma. Integração via Apache Thrift, coleta automática por serviços em segundo plano, dashboard em tempo real e exportação para folha de pagamento.",
+      en: "Enterprise .NET 8 platform for centralized biometric terminal management. Direct Sigma hardware integration via Apache Thrift, automated background attendance collection, real-time dashboard, and payroll export."
+    },
+    details: {
+      pt: `
+        <h6 class="case-study-heading"><i class="fas fa-info-circle me-2"></i>Contexto & Desafio</h6>
+        <p class="case-study-text">A organização registava o ponto dos colaboradores através de terminais biométricos Sigma em múltiplos pontos de acesso. A exploração manual dos dados provocava falta de visibilidade sobre o estado dos equipamentos e risco de perda de registos. O desafio foi centralizar toda a operação de assiduidade numa única aplicação web, com monitorização em tempo real, coleta automática e aplicação de regras de negócio diferenciadas (horário normal, turnos, motoristas e horários de proteção à maternidade).</p>
+
+        <h6 class="case-study-heading"><i class="fas fa-microchip me-2"></i>Destaques Técnicos & Arquitetura</h6>
+        <ul class="case-study-list">
+          <li><strong>Arquitetura em 3 Projetos:</strong> Solução em .NET 8 dividida em Aplicação MVC, API RESTful e biblioteca de modelos partilhados.</li>
+          <li><strong>Integração com Hardware:</strong> Comunicação direta com o SDK dos terminais biométricos Sigma MA5G via protocolo Apache Thrift, adaptado e recompilado para .NET 8.</li>
+          <li><strong>Background Services Resilientes:</strong> Coleta automática de picagens a cada 3 minutos, com rotinas de reconexão automática e tolerância a falhas de comunicação.</li>
+          <li><strong>Dashboard em Tempo Real:</strong> Painel operacional com atualização automática a cada 15 segundos para visualização do estado dos terminais e fluxo diário de picagens.</li>
+          <li><strong>Motor Inteligente de Assiduidade:</strong> Identificação de intervalos de almoço e processamento de regras por tipo de jornada (normal com 4 picagens e turnos com 2 picagens).</li>
+          <li><strong>Gestão Remota & Exportação Salarial:</strong> Sincronização remota do relógio dos terminais e exportação em formatos formatados (.dat e .csv) para alimentação direta do sistema de folha de pagamento.</li>
+          <li><strong>Auditoria Centralizada:</strong> Rastreabilidade e registo de eventos operacionais com Serilog.</li>
+        </ul>
+
+        <h6 class="case-study-heading"><i class="fas fa-check-circle me-2"></i>Resultado & Impacto</h6>
+        <p class="case-study-text">Acompanhamento centralizado em tempo real de todos os terminais, eliminando o trabalho manual de consolidação e o risco de extravio de dados. A exportação automatizada reduziu substancialmente o tempo de fecho dos registos para processamento salarial.</p>
+
+        <h6 class="case-study-heading"><i class="fas fa-user-tie me-2"></i>Meu Papel</h6>
+        <p class="case-study-text">Concepção, arquitetura de software, integração de protocolos de hardware e desenvolvimento full-stack em C# / .NET 8.</p>
+      `,
+      en: `
+        <h6 class="case-study-heading"><i class="fas fa-info-circle me-2"></i>Context & Challenge</h6>
+        <p class="case-study-text">Employee attendance was recorded across multiple access points via Sigma biometric terminals. Manual data extraction led to zero visibility over hardware downtime and risks of lost attendance records. The challenge was to centralize biometric operations into a unified web application with automated background collection and dynamic business rules for distinct work shifts.</p>
+
+        <h6 class="case-study-heading"><i class="fas fa-microchip me-2"></i>Technical Highlights & Architecture</h6>
+        <ul class="case-study-list">
+          <li><strong>3-Project Solution Architecture:</strong> .NET 8 solution structured into an MVC Application, RESTful Web API, and shared model library.</li>
+          <li><strong>Direct Hardware Integration:</strong> Direct socket communication with Sigma MA5G SDK via Apache Thrift protocol, customized and recompiled for .NET 8.</li>
+          <li><strong>Resilient Background Services:</strong> Automated punch collection every 3 minutes with automatic reconnection and retry logic.</li>
+          <li><strong>Live Operational Dashboard:</strong> Real-time operational board with 15-second auto-refresh for terminal connectivity and daily logs.</li>
+          <li><strong>Smart Attendance Engine:</strong> Automated meal-break detection and distinct processing for regular and shift workers.</li>
+          <li><strong>Remote Management & Payroll Export:</strong> Remote terminal clock synchronization and formatted exports (.dat and .csv) for direct payroll integration.</li>
+          <li><strong>Centralized Logging:</strong> Full operational audit trail and diagnostic logging with Serilog.</li>
+        </ul>
+
+        <h6 class="case-study-heading"><i class="fas fa-check-circle me-2"></i>Result & Impact</h6>
+        <p class="case-study-text">Real-time centralized monitoring of all terminals, eliminating manual consolidation and preventing record loss. Formatted automated export drastically reduced payroll preparation turnaround time.</p>
+
+        <h6 class="case-study-heading"><i class="fas fa-user-tie me-2"></i>My Role</h6>
+        <p class="case-study-text">Solution design, software architecture, hardware protocol integration, and full-stack engineering with C# / .NET 8.</p>
+      `
+    }
+  },
+  {
     id: "tuie",
     title: "Tuie Táxi",
     badge: "Mobile App",
@@ -496,7 +553,7 @@ function renderProjects(lang) {
 
     projects.forEach((project, index) => {
         const col = document.createElement("div");
-        col.className = project.isCorporate ? "col-lg-6 col-md-6 fade-in-up" : "col-lg-4 col-md-6 fade-in-up";
+                col.className = "col-lg-4 col-md-6 fade-in-up";
 
         const tagsHtml = project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('');
 
